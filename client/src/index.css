@@ -515,3 +515,52 @@ h2 {
     font-size: 22px;
   }
 }
+
+/* Pagination */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-top: 24px;
+  padding: 10px 0;
+}
+
+
+.pagination button {
+  min-width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+
+.pagination button:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+
+.pagination .page-number.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+
+.pagination .page-arrow {
+  font-size: 20px;
+  line-height: 1;
+}
+
+
+.pagination button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
